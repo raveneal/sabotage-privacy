@@ -55,15 +55,17 @@
 <main>
 
 <h1>Sabotage — Privacy Policy</h1>
-<p class="sub">Last updated 9 October 2026</p>
+<p class="sub">Last updated 13 October 2026</p>
 
 <div class="panel">
   <p><strong>The short version.</strong> Sabotage does not ask for your name or a password, and it
   never asks for your email &mdash; the only way an email address reaches us is if you choose to
   attach Sign in with Apple or Google Sign-In, and then only to identify your account. It creates an anonymous account so your progress and your place on the leaderboard
-  belong to you rather than to the phone. It contains no analytics, tracking or crash-reporting
-  software of any kind. Advertising is opt-in only — you watch an ad because you chose to, and
-  there are no interstitials. The microphone is used only during co-op voice chat, is never
+  belong to you rather than to the phone. It contains no analytics or crash-reporting software. It
+  does include <strong>Meta's app-events SDK</strong>, which tells Meta that the game was installed
+  and opened, so we can tell whether our own ads on Facebook and Instagram work (see below).
+  Advertising inside the game is opt-in only — you watch an ad because you chose to, and there are
+  no interstitials. The microphone is used only during co-op voice chat, is never
   recorded, and is never stored.</p>
 </div>
 
@@ -114,6 +116,26 @@ device's advertising identifier to choose and measure ads. You can limit or rese
 your device settings at any time, and where the law requires it you will be asked for consent before
 personalised ads are used.</p>
 
+<h3>Measuring our own ads (Meta)</h3>
+<p>We advertise Sabotage on Facebook and Instagram. To know whether those ads lead to people actually
+playing, the game includes <strong>Meta's app-events SDK</strong> (Facebook SDK). It sends Meta a
+small set of <em>app events</em>: that the game was installed, each time it is opened, and in-app
+purchases (what was bought and its price) &mdash; together with basic device information (device
+model, operating system and app version, language, time zone) and the IP address of the request.</p>
+<ul>
+  <li><strong>On Android</strong> these events carry your device's advertising ID, which Meta uses to
+  match an install to an ad. You can reset or delete that ID in your phone's settings (Settings &rarr;
+  Google &rarr; Ads, or Settings &rarr; Privacy &rarr; Ads) at any time.</li>
+  <li><strong>On iPhone</strong> the game never asks for permission to track you, so Meta does not
+  receive your device's advertising identifier. Installs are measured through Apple's privacy-preserving
+  SKAdNetwork instead, which reports to Meta in aggregate without identifying you.</li>
+</ul>
+<p>The SDK does not log you in to Facebook, does not need a Facebook account, and does not receive
+your handle, scores, email address or anything you type. Meta handles the data it receives under its
+own policy: <a href="https://www.facebook.com/privacy/policy/">facebook.com/privacy/policy</a>. You can
+also control how Meta uses activity from apps for ads in your Facebook or Instagram settings under
+<em>Ad preferences &rarr; Activity information from ad partners</em>.</p>
+
 <h3>The microphone, in co-op only</h3>
 <p>Co-op games include voice chat. When it is on, your microphone audio is sent live to the other
 player through our relay server and is <strong>discarded immediately</strong>. It is never recorded,
@@ -127,7 +149,7 @@ work and to stop abuse.</p>
 
 <h2>What the game does not collect</h2>
 <ul>
-  <li>No analytics, telemetry, crash-reporting or attribution software. There is none in the app.</li>
+  <li>No analytics, telemetry or crash-reporting software. The only measurement code in the app is Meta's app-events SDK, described above, and it reports only installs, app opens and purchases.</li>
   <li>No location data.</li>
   <li>No contacts, photos, files or calendar.</li>
   <li>No browsing or app-usage history from outside Sabotage.</li>
@@ -141,6 +163,7 @@ work and to stop abuse.</p>
   <tr><th>Who</th><th>What they get</th><th>Why</th></tr>
   <tr><td>Supabase</td><td>Your account identifier, handle, progress and scores &mdash; and, if you attach Sign in with Apple or Google Sign-In, the email address it shares</td><td>Hosts the accounts, the leaderboard and the server-side economy</td></tr>
   <tr><td>Google AdMob</td><td>Advertising identifier and ad interaction data</td><td>Serving the opt-in rewarded ads</td></tr>
+  <tr><td>Meta (Facebook)</td><td>App events &mdash; install, app opens, purchases &mdash; with device information, IP address and, on Android only, the advertising ID</td><td>Measuring whether our ads on Facebook and Instagram lead to installs</td></tr>
   <tr><td>Apple / Google</td><td>Sign-in and purchase records</td><td>Optional sign-in, and processing in-app purchases</td></tr>
   <tr><td>Our co-op relay</td><td>Live game and voice traffic during a co-op session</td><td>Connecting two players; nothing is retained after the session</td></tr>
 </table>

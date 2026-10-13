@@ -12,7 +12,8 @@ app is listed** -- do not make this repository private and do not rename it.
 The policy describes what the game actually does, checked against the source rather than written
 from a template: an anonymous Supabase account per player, an optional Apple/Google link, a public
 handle and leaderboard stats, opt-in rewarded AdMob ads only, purchases through the stores, and the
-microphone in co-op voice which is relayed live and never stored. Sabotage ships no analytics,
-telemetry or crash-reporting SDK, which is why the policy is able to say so.
+microphone in co-op voice which is relayed live and never stored. Sabotage ships no analytics or
+crash-reporting SDK; the one measurement SDK is Meta's app-events SDK (installs, opens and
+purchases, for measuring the game's own Facebook/Instagram ads), and the policy says exactly that.
 
 If the game starts collecting something new, this page changes first.
